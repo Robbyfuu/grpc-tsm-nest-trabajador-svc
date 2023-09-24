@@ -12,7 +12,7 @@ async function bootstrap() {
     {
       transport: Transport.GRPC,
       options: {
-        url: '0.0.0.0:50052',
+        url: `${process.env.GRPC_SERVER_HOST_TRABAJADOR}:50052`,
         package: protobufPackage,
         protoPath: join(
           'node_modules/grpc-tsm-nestjs-proto/proto/trabajadores.proto',
